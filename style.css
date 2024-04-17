@@ -74,8 +74,7 @@ ul {
     justify-content: start;
     align-items: center;
     margin-left: 20px;
-    gap: 16px;
-    
+    gap: 16px;    
 }
 
 ul svg {
@@ -90,11 +89,114 @@ li {
 }
 /* Sidebar properties end */
 
+/* Header properties start */
 .header {
     grid-row: 1;
     grid-column: 2;
     background-color: var(--header-color);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    display: grid;
 }
+
+.search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    margin-left: 48px;
+}
+
+.header svg {
+    width: 24px;
+}
+
+input[type="text"] {
+    appearance: none;
+    border: none;
+    width: 90%;
+    height: 32px;
+    background-color: #e2e8f0;
+    border-radius: 50px;
+}
+
+.notification {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+    margin-left: 48px;
+}
+
+.notification svg {
+    width: 24px;
+}
+
+.notification h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.notification .profile-img {
+    width: 44px;
+    height: 44px;
+}
+
+.profile-img {
+    content: url("./assets/penguin.png");
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+}
+
+.user {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
+    column-gap: 24px;
+    margin-left: 48px;
+}
+
+.user .profile-img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.user p {
+    font-weight: bold;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.user h2 {
+    font-weight: bolder;
+    font-size: 1.4rem;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.button-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+}
+
+button {
+    background-color: rgb(var(--sidebar-color));
+    width: 96px;
+    height: 32px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+/* Header properties end */
 
 .main {
     grid-row: 2;
