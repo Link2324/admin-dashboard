@@ -102,6 +102,8 @@ li {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr;
     display: grid;
+    box-shadow: 0px 4px 4px 0px #00000012;
+    z-index: 1;
 }
 
 .search {
@@ -124,6 +126,14 @@ input[type="text"] {
     height: 32px;
     background-color: #e2e8f0;
     border-radius: 50px;
+}
+
+input[type="text"]:hover {
+    background-color: #cfd6e0;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid rgb(var(--sidebar-color));
 }
 
 .notification {
@@ -201,6 +211,10 @@ button {
     color: white;
     border: none;
 }
+
+button:hover {
+    background-color: rgb(78 189 250);
+}
 /* Header properties end */
 
 /* Main content properties start*/
@@ -247,6 +261,7 @@ button {
     padding: 24px 16px;
     display: grid;
     grid-template-rows: min-content auto min-content;
+    box-shadow: 2px 2px 4px #00000033;
 }
 
 .card h4{
@@ -281,6 +296,7 @@ button {
     border-radius: 10px;
     display: grid;
     padding: 16px;
+    box-shadow: 2px 2px 4px #00000033;
 }
 
 .announcement-card > hr {
@@ -314,6 +330,7 @@ button {
     height: 400px;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 2px 2px 4px #00000033;
 }
 
 .trending-user {
